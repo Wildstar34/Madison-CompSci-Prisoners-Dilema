@@ -244,6 +244,14 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
                 return 'b' 
             else:
                 return 'c' #if they were nice, we'll be nice
+ elif player == 12:
+        if getting_team_name: # This one colludes for a while and then snaps and goes betray
+            return 'McGingerSnap'
+        else:
+            if len(opponent_history)>30:
+                return 'b'
+            else:
+                return 'c'
 def play_tournament(num_players, whichGuy, rounds):
     #create a list of zeros, one per player
     scores = []
